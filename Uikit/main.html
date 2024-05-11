@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Apresentação Uikit</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+
+        <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m uk-align-center" style="background-color: aquamarine; font-size: x-large;">
+            <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-overlay" uk-icon="icon: menu; ration: 7"></button>
+
+            <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+                <div class="uk-offcanvas-bar">
+            
+                    <button class="uk-offcanvas-close" type="button" uk-close></button>
+            
+            
+                    <h1 style="text-align: center;">Links</h1>
+            
+                    <p>
+                        <!--Exemplo simplificado do uso de icones pre setados do proprio uikit
+                        Com a facil atribuição de links a redirecionamentos a eles sendo eles responsivos e de facil manipulação
+                        -->
+                        <div class="uk-align-right">  
+                            <a href="https://www.canva.com/design/DAGE8d4VUZc/NH2yuf0RcDRcgt8wqK62xA/edit?utm_content=DAGE8d4VUZc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" uk-icon="icon: star; ratio: 7"></a>
+                            <a href="" uk-icon="icon: github; ratio: 7"></a>
+                            <a href="../Uikit/slide.html" uk-icon="icon: image; ratio: 7"></a>
+                            <a href="https://getuikit.com" uk-icon="icon: uikit; ratio: 7"></a>
+                            <a href="https://www.twitch.tv" uk-icon="icon: twitch; ratio: 7"></a>
+                            <a href="https://www.youtube.com" uk-icon="icon:  youtube; ratio: 7"></a>
+                        </div>
+                    </p>
+            
+                </div>
+            </div>
+            <h3 class="uk-card-title uk-text-center" style="font-size: xx-large;">Este e nosso site.</h3>
+            <p>Serão apresentados alguns exemplos de uso do uikit ao decorrer da apresentação.</p>
+        </div>
+
+    </head>
+    <body style="background-color:#EBF5FB;">
+
+        <!-- Função inview da um autoloop no video infinitamente enquanto o usuario esta na tela 
+             Função hover apenas vai dar o play no video quando o cursos estiver em cima do video
+             Se nao houver nenhuma destas funçoes o video fica estatico
+        --> 
+        <div class="uk-child-width-1-1@m uk-text-center" uk-grid>
+            <div class="uk-grid-item-match">
+                <div class="uk-width-1-3">
+                    <h1>Loop Mutado</h1>
+                    <video src="../Uikit/WhatsApp Video 2024-05-11 at 09.43.14.mp4" width="280" height="170" loop muted playsinline uk-video="autoplay: inview"></video>
+                </div>
+                <div class="uk-width-1-3">
+                    <h1>Play ao ficar com o mouse</h1>
+                    <video src="../Uikit/WhatsApp Video 2024-05-11 at 09.43.14.mp4" width="280" height="170" loop playsinline uk-video="autoplay: hover"></video>
+                </div>
+                <div class="uk-width-1-3">
+                    <h1>"Vídeo" estático</h1>
+                    <video src="../Uikit/WhatsApp Video 2024-05-11 at 09.43.14.mp4" width="280" height="170" loop playsinline uk-video="autoplay:  "></video>
+                </div>
+        </div>    
+
+        <!-- Exemplo de formatação de textos, com algumas propriedades do ukit aplicadas
+             e o outro nao, com apenas o html cru.
+        -->
+        <div class="uk-child-width-expand@s" uk-grid>
+            <div class="uk-grid-item-match">
+                <div class="uk-card uk-card-default uk-card-body" style="background-color: #444;" >
+                    <h3 style="color:green;">Teste 1</h3>
+                    <p style="color:white;">
+                        Neste exemplo, já a algum trabalho com css pois o texto esta suspenso e mais destacado em relação a página ao
+                        utilizar o elemento uk-card, que cria um cartão.
+                    </p>
+                </div>
+             </div>
+            <div>
+                <h3>Teste 2</h3>
+                <p>
+                   No exemplo dois como podemos ver, é apenas um texto em html cru, apenas com poucas formas de identação alinhados abaixo do titulo e na prezos a tela.
+                </p>
+            </div>
+        </div>
+
+        <!--Exemplo de alertas para o usuario, cada um seguindo um padrao de cores e com uma classe especifica
+            "primary sendo alertas comuns"
+            "sucess sendo para avisos de sucesso como por exemplo sucesso ao logar"
+            "warning sendo para avisos de perigo ou alerta ao usuario"
+            "danger sendo o alerta maximo de erro crito por exemplo"
+        -->
+        <div class="uk-alert-primary" uk-alert>
+            <a href class="uk-alert-close" uk-close></a>
+            <p>Isto é apenas um teste.</p>
+        </div>
+        
+        <div class="uk-alert-success" uk-alert>
+            <a href class="uk-alert-close" uk-close></a>
+            <p>Beba água.</p>
+        </div>
+        
+        <div class="uk-alert-warning" uk-alert>
+            <a href class="uk-alert-close" uk-close></a>
+            <p>Se voce perdeu a A1 fique ligado na segunda chamada para a prova</p>
+        </div>
+        
+        <div class="uk-alert-danger" uk-alert>
+            <a href class="uk-alert-close" uk-close></a>
+            <p>Doe Sangue!</p>
+        </div>
+
+      
+        
+    </body>
+</html>
